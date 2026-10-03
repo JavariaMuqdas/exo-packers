@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.exopackers.pk/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://www.exopackers.pk/assets/img/hero-1.jpg</image:loc><image:title>Exo Packers and Movers truck</image:title></image:image>
+    <image:image><image:loc>https://www.exopackers.pk/assets/img/svc-house.jpg</image:loc><image:title>House shifting service</image:title></image:image>
+    <image:image><image:loc>https://www.exopackers.pk/assets/img/fleet-40ft.jpg</image:loc><image:title>Container truck</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://www.exopackers.pk/about.php</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.exopackers.pk/services.php</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.exopackers.pk/fleets.php</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.exopackers.pk/faq.php</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.exopackers.pk/contact.php</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- To add a page: copy one <url> block above and change the address -->
+</urlset>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /actions/
+Disallow: /includes/
+
+Sitemap: https://www.exopackers.pk/sitemap.xml

@@ -1,0 +1,45 @@
+HOW TO ADD A NEW PAGE (example: gallery.php)
+=============================================
+1. Copy this file's code into a new file in the main folder and name it gallery.php
+2. Change the title, description, path, banner text and the content in the middle.
+3. Add a link to it:  includes/header.php (menu) and/or includes/footer.php
+4. Add the page to sitemap.xml so Google finds it.
+
+----------------------- copy from the next line -----------------------
+<?php
+require_once 'includes/config.php';
+require_once 'includes/seo.php';
+
+$title  = 'Gallery | ' . SITE_NAME;                         // shown in the browser tab and Google (keep under 60 characters)
+$desc   = 'One sentence about this page (120-155 characters).';   // shown under the title in Google
+$path   = '/gallery.php';                                    // must match the file name
+$page   = 'gallery';                                         // used to highlight the menu link (see header.php)
+$banner = [
+  'title' => 'Our gallery',                                  // becomes the page heading (H1)
+  'lead'  => 'A short line under the heading.',
+  'crumb' => 'Gallery',                                      // name in the breadcrumb
+  'theme' => 1,                                              // sky: 1 sunset, 2 day, 3 night
+  'truck' => 1,                                              // truck: 1 red, 2 green, 3 teal container
+];
+$schemas = [schema_business(), schema_breadcrumbs([['Home', '/'], ['Gallery', $path]])];
+include 'includes/header.php';
+include 'includes/page-banner.php';
+?>
+
+<section class="section">
+  <div class="wrap">
+    <div class="head head--center">
+      <h2 class="h2">Your section heading</h2>
+      <p>A short intro line.</p>
+    </div>
+
+    <!-- Your content goes here -->
+
+  </div>
+</section>
+
+<?php include 'includes/cta.php'; include 'includes/footer.php'; ?>
+----------------------- stop copying here -----------------------
+
+TO SHOW THE NEW PAGE IN THE MENU, add this line inside <div class="nav__links"> in includes/header.php:
+<a href="gallery.php" class="nav__link <?= $page === 'gallery' ? 'is-active' : '' ?>">Gallery</a>

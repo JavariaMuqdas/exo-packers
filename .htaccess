@@ -1,0 +1,37 @@
+# ---- Exo Packers and Movers: server settings (Apache / XAMPP / cPanel) ----
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # After you install an SSL certificate on your live site, uncomment these two lines:
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # On your LIVE site (domain root), uncomment these 2 lines so Google sees one homepage address.
+  # Leave them off on localhost because the project sits in a sub-folder there.
+  # RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
+  # RewriteRule ^index\.php$ / [R=301,L]
+</IfModule>
+
+# Compress text files
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/ld+json
+</IfModule>
+
+# Cache static files in the browser (faster repeat visits = better SEO)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg  "access plus 1 year"
+  ExpiresByType image/png   "access plus 1 year"
+  ExpiresByType image/webp  "access plus 1 year"
+  ExpiresByType text/css    "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Basic security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
